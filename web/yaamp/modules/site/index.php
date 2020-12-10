@@ -17,7 +17,7 @@ $min_sunday = $min_payout/10;
 $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 ?>
 
-<div id='resume_update_button' style='color: #444; background-color: #ffd; border: 1px solid #eea;
+<div id='resume_update_button' style='color: #000; background-color: #EFD20A; border: 1px solid #F0C20A;
 	padding: 10px; margin-left: 20px; margin-right: 20px; margin-top: 15px; cursor: pointer; display: none;'
 	onclick='auto_page_resume();' align=center>
 	<b>Auto refresh is paused - Click to resume</b></div>
@@ -28,18 +28,22 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <!--  -->
 
 <div class="main-left-box">
-<div class="main-left-title">YII MINING POOLS</div>
+<div class="main-left-title">NoteBC Official Pool</div>
 <div class="main-left-inner">
+
+<img src="/images/pool-logo.png" alt="NoteBC Pool" class="logo-wrap"/>
 
 <ul>
 
-<li>YiiMP is a pool management solution based on the Yii Framework.</li>
-<li>This fork was based on the yaamp source code and is now an open source project.</li>
-<li>No registration is required, we do payouts in the currency you mine. Use your wallet address as the username.</li>
+<li>Welcome to the NOTEBC Official Mining Pool.</li>
 <li>&nbsp;</li>
-<li>Payouts are made automatically every <?= $payout_freq ?> for all balances above <b><?= $min_payout ?></b>, or <b><?= $min_sunday ?></b> on Sunday.</li>
-<li>For some coins, there is an initial delay before the first payout, please wait at least 6 hours before asking for support.</li>
-<li>Blocks are distributed proportionally among valid submitted shares.</li>
+<li>No registration is required, we do payouts in NTBC. Use your wallet address as the username.</li>
+<li>&nbsp;</li>
+<li>Payouts are made automatically every 2 hours. From Mon-Sat, if your balance is above <b>100</b>, your wallet address will be chosen for payout. On Sundays, you only need a pending balance of <b>10</b> NOTEs to be selected for payouts.</li>
+<li>&nbsp;</li>
+<li>For some cases, there is an initial delay before the first payout, please wait at least 6 hours before asking for support. The top right corner indicates the next payout time (in UTC)</li>
+<li>&nbsp;</li>
+<li>Blocks are distributed proportionally among valid submitted shares. Considering that there are ASICs mining to the pool, CPU or GPU mining is not advised.</li>
 
 <br/>
 
@@ -56,9 +60,32 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <ul>
 
 <li>
-<p class="main-left-box" style='padding: 3px; font-size: .8em; background-color: #ffffee; font-family: monospace;'>
-	-o stratum+tcp://<?= YAAMP_STRATUM_URL ?>:&lt;PORT&gt; -u &lt;WALLET_ADDRESS&gt; [-p &lt;OPTIONS&gt;]</p>
+<p>Generic Stratum details for the pool</p>
+<p class="main-left-box" style='padding: 3px; font-size: .8em; background-color: #000; color: #F0DF0B; font-family: "Fira Code", monospace;'>
+	-o stratum+tcp://mining.notebc.space:3433 -u &lt;WALLET_ADDRESS&gt; -p c=NOTE</p>
 </li>
+
+<li>
+<p><strong>Supported Miners</strong><em>(with sample configuration)</em></p>
+</li>
+
+<li>
+<p>CGMiner v4.9.0 - ASICs</p>
+<p class="main-left-box" style='padding: 3px; font-size: .8em; background-color: #000; color: #F0DF0B; font-family: "Fira Code", monospace;'>
+ cgminer -a scrypt -o stratum+tcp://mining.notebc.space:3433 -u ADDRESS -p c=NOTE
+</p>
+</li>
+
+<li>
+<p>BFGMiner v5.4.2 - FutureBit Moonlander 2</p>
+
+<p> NoteBC is proud to support low wattage mining initiatives. You can use Moonlander (ML2) or Apollo from FutureBit. Alternative to the ML2
+is the TTBit Scrypt miner.</p>
+<p class="main-left-box" style='padding: 3px; font-size: .8em; background-color: #000; color: #F0DF0B; font-family: "Fira Code", monospace;'>
+bfgminer --scrypt -o stratum+tcp://mining.notebc.space:3433 -u ADDRESS -p password -S MLD:all --set MLD:clock=600
+</p>
+</li>
+
 
 <?php if (YAAMP_ALLOW_EXCHANGE): ?>
 <li>&lt;WALLET_ADDRESS&gt; can be one of any currency we mine or a BTC address.</li>
@@ -101,8 +128,8 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 
 <!--  -->
 
-<a class="twitter-timeline" href="https://twitter.com/hashtag/YAAMP" data-widget-id="617405893039292417" data-chrome="transparent" height="450px" data-tweet-limit="3" data-aria-polite="polite">Tweets about #YAAMP</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<a class="twitter-timeline" href="https://twitter.com/BlockchainNote?ref_src=twsrc%5Etfw">Tweets by BlockchainNote</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </td><td valign=top>
 

@@ -4,10 +4,11 @@
 @import url("tags.css");
 @import url("news.css");
 @import url("objectmenu.css");
+@import url("fonts.css");
 
 body
 {
-	font: normal 10pt Arial,Helvetica,sans-serif;
+	font: normal 10pt "TeXGyreAdventor", Arial, Helvetica, sans-serif;
 	background-color: white;
 	color: #444;
 	text-align: left;
@@ -90,7 +91,7 @@ hr
 	left: 0px;
 	z-index: 8;
 	height: 40px;
-	color: #aaa;
+	color: #EFD20A;
 
 	background-image: url(/images/base/top_header.png);
 	background-repeat: repeat-x;
@@ -170,7 +171,7 @@ hr
 .main-left-title
 {
 	padding: 8px;
-	background-color: #e5e5e5;
+	background-color: #F5E8C2;
 	font-weight: bold;
 }
 
@@ -206,6 +207,14 @@ hr
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	padding: 5px;
+}
+
+.logo-wrap
+{
+	float: left;
+	margin: 10px;
+	width: 150px;
+	height: 150px;
 }
 
 /* ---------------------------------------------- */
