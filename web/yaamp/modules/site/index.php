@@ -62,7 +62,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <li>
 <p>Generic Stratum details for the pool</p>
 <p class="main-left-box" style='padding: 3px; font-size: .8em; background-color: #000; color: #F0DF0B; font-family: "Fira Code", monospace;'>
-	-o stratum+tcp://mining.notebc.space:3433 -u &lt;WALLET_ADDRESS&gt; -p c=NOTE</p>
+	-o stratum+tcp://mining.notebc.space:3433 -u &lt;WALLET_ADDRESS&gt; -p c=NTBC</p>
 </li>
 
 <li>
@@ -72,7 +72,7 @@ $payout_freq = (YAAMP_PAYMENTS_FREQ / 3600)." hours";
 <li>
 <p>CGMiner v4.9.0 - ASICs</p>
 <p class="main-left-box" style='padding: 3px; font-size: .8em; background-color: #000; color: #F0DF0B; font-family: "Fira Code", monospace;'>
- cgminer -a scrypt -o stratum+tcp://mining.notebc.space:3433 -u ADDRESS -p c=NOTE
+ cgminer -a scrypt -o stratum+tcp://mining.notebc.space:3433 -u ADDRESS -p c=NTBC
 </p>
 </li>
 
